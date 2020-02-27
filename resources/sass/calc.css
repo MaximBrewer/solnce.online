@@ -1,0 +1,519 @@
+/* ---------------------------- FONTS ---------------------------- */
+@font-face
+{
+   font-family:'GoodVibes';
+   src:url('/fonts/Appetite.ttf');
+}
+/*@font-face
+{
+   font-family:'Ubuntu';
+   font-style:italic;
+   src:url('/fonts/Ubuntu-RI.ttf');
+}
+@font-face
+{
+   font-family:'Ubuntu';
+   font-weight:bold;
+   src:url('/fonts/Ubuntu-M.ttf');
+}
+@font-face
+{
+   font-family:'Ubuntu';
+   font-style:italic;
+   font-weight:bold;
+   src:url('/fonts/Ubuntu-MI.ttf');
+}*/
+
+/* ---------------------------- RESET ---------------------------- */
+#plant_calc *
+{
+   border:none;
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+   background:none transparent;
+}
+
+#plant_calc table
+{
+   border-collapse:collapse;
+}
+
+/* --- Flex styles --- */
+#plant_calc .flex
+{
+   display:flex;
+   flex-flow:row wrap;
+   justify-content:flex-start;
+   align-items:flex-start;
+}
+#plant_calc .flex.col
+{
+   flex-flow:column;
+}
+
+#plant_calc .flex.start 
+{
+   justify-content:flex-start;
+}
+#plant_calc .flex.center
+{
+   justify-content:center;
+}
+#plant_calc .flex.end
+{
+   justify-content:flex-end;
+}
+#plant_calc .flex.between
+{
+   justify-content:space-between;
+}
+#plant_calc .flex.around
+{
+   justify-content:space-around;
+}
+#plant_calc .flex.evenly
+{
+   justify-content:space-evenly;
+}
+
+#plant_calc .flex.x-start 
+{
+   align-items:flex-start;
+}
+#plant_calc .flex.x-center
+{
+   align-items:center;
+}
+#plant_calc .flex.x-end
+{
+   align-items:flex-end;
+}
+#plant_calc .flex.x-stretch
+{
+   align-items:stretch;
+}
+
+/* flex quasitable */
+#plant_calc .table
+{
+   display:flex;
+   flex-flow:column;
+   justify-content:flex-start;
+   align-items:stretch;
+}
+
+#plant_calc .table>.row,
+#plant_calc .table>.row>.group
+{
+   display:flex;
+   flex-flow:row wrap;
+   justify-content:flex-start;
+   align-items:stretch;
+}
+
+#plant_calc .table>.row .cell
+{
+   flex:0 1 auto;
+   padding:0.2em 0.5em;
+}
+
+/* ---------------------------- MAIN ---------------------------- */
+#plant_calc
+{
+   min-width:650px;
+}
+
+#plant_calc,
+#plant_calc *
+{
+   font-family:'GoodVibes',sans-serif;
+   font-size:14px;
+   line-height:1.2;
+   color:#A12C2C;
+}
+
+#plant_calc .row
+{
+   display:flex;
+   flex-flow:row;
+}
+
+#plant_calc .row .middle
+{
+   flex:0 0 30%;
+   margin:0 -0.75em 0 -0.75em;
+}
+#plant_calc .row .side
+{
+   flex:1 1 45%;
+   position:relative;
+}
+
+#plant_calc .row .side img.bg_aligner
+{
+   width:100%;
+   margin-bottom:-12%;
+}
+
+#plant_calc .top .side .indicator
+{
+   position:absolute;
+   bottom:45%;
+   width:5em;
+   height:5em;
+   border:3px solid #A12C2C;
+   border-radius:50%;
+   background:none #EDF9FF;
+}
+
+/* --- Middle Quantity Block --- */
+#plant_calc .top .qty_blk
+{
+   
+}
+
+#plant_calc .top .qty_blk .inp_outer
+{
+   position:relative;
+}
+
+#plant_calc .top .qty_blk .inp_outer>img.bg_aligner
+{
+   width:100%;
+}
+
+#plant_calc .top .qty_blk .inp_outer input
+{
+   position:absolute;
+   top:calc(50% - 0.5em);
+   width:100%;
+   font-size:800%;
+   line-height:1;
+   text-align:center;
+   color:#A12C2C;
+}
+
+#plant_calc .top .qty_blk .range_outer
+{
+   height:4em;
+   padding:0 60px 0 50px;
+   background:url('/images/range_start_bg.svg') 0 0/55px 100% no-repeat, url('/images/range_mid_bg.svg') 55px 0/calc(100% - 111px) 100% no-repeat, url('/images/range_end_bg.svg') 100% 0/66px 100% no-repeat transparent;
+}
+
+#plant_calc .top .qty_blk .range_outer .range_bar
+{
+   width:100%;
+   height:100%;
+   background:url('/images/range_slider_bg.svg') 0 0/auto 100% no-repeat,url('/images/range_slider_bg.svg') 0 0/auto 100% no-repeat transparent;
+}
+
+#plant_calc .top .qty_blk .range_legend
+{
+   font-size:250%;
+   text-align:center;
+}
+
+/* --- Left Age Block --- */
+#plant_calc .top .side.age_blk
+{
+}
+
+#plant_calc .top .side.age_blk .title
+{
+   font-size:220%;
+   color:#A12C2C;
+}
+
+#plant_calc .top .side.age_blk .indicator
+{
+   margin-left:15%;
+}
+
+#plant_calc .top .side.age_blk .indicator>.value
+{
+   margin-top:0.1em;
+   font-size:350%;
+   line-height:1;
+}
+
+#plant_calc .top .side.age_blk .age_radiogroup
+{
+   flex:0 0 4em;
+   width:100%;
+   padding:0 4em 0 1.8em;
+}
+
+/* --- Right Price Block --- */
+#plant_calc .top .side.efficiency_blk
+{
+   
+}
+
+#plant_calc .top .side.efficiency_blk .title
+{
+   font-size:220%;
+   color:#A12C2C;
+   text-align:right;
+}
+
+#plant_calc .top .side.efficiency_blk .indicator
+{
+   margin-right:15%;
+}
+
+#plant_calc .top .side.efficiency_blk .indicator>.value
+{
+   margin-top:0.18em;
+   font-size:180%;
+   line-height:1;
+}
+
+#plant_calc .top .side.efficiency_blk .age_radiogroup
+{
+   flex:0 0 4em;
+   width:100%;
+   padding:0 1.8em 0 4em;
+}
+
+/* Custom Radios */
+#plant_calc label.radio.age
+{
+   display:inline-block;
+   position:relative;
+   vertical-align:baseline/*bottom*/;
+   padding:0.4em 0.53em 0.1em 0.5em;
+   font-size:131;
+   background:url('/images/age_radio_bg.svg') 0 0/200% 200% no-repeat transparent;
+}
+#plant_calc label.radio.age.checked
+{
+   color:#EDF9FF;
+   background-position-y:100%;
+}
+#plant_calc label.radio.age.focused
+{
+   background-position-x:100%;
+}
+
+#plant_calc label.radio.age>input[type='radio']
+{
+   position:absolute;
+   visibility:hidden;
+}
+
+/* Tree selector */
+#plant_calc .plant_selector_outer
+{
+   position:relative;
+   flex:0 1 30%;
+   height:5em;
+}
+
+#plant_calc .plant_selector
+{
+   position:absolute;
+   top:0;
+   left:0;
+   right:0;
+   height:100%;
+   overflow:visible;
+   padding:2em 3em;
+   background:url('/images/list_tl_bg.svg') 0 0/2.4em 2em no-repeat,
+              url('/images/list_tm_bg.svg') 2.4em 0/calc(100% - 4.8em) 2em no-repeat,
+              url('/images/list_tr_bg.svg') 100% 0/2.4em 2em no-repeat,
+              url('/images/list_ml_bg.svg') 0 2em/2.4em calc(100% - 4em) no-repeat,
+              url('/images/list_mm_bg.svg') 2.4em 2em/calc(100% - 4.8em) calc(100% - 4em) no-repeat,
+              url('/images/list_mr_bg.svg') 100% 2em/2.4em calc(100% - 4em) no-repeat,
+              url('/images/list_bl_bg.svg') 0 100%/2.4em 2em no-repeat,
+              url('/images/list_bm_bg.svg') 2.4em 100%/calc(100% - 4.8em) 2em no-repeat,
+              url('/images/list_br_bg.svg') 100% 100%/2.4em 2em no-repeat,
+              transparent;
+}
+#plant_calc .plant_selector.unfolded
+{
+   top:-200%;
+   height:600%;
+}
+
+#plant_calc .plant_selector>.list
+{
+   width:100%;
+   height:100%;
+   overflow:visible;
+}
+#plant_calc .plant_selector.unfolded>.list
+{
+   overflow-y:scroll;
+}
+
+#plant_calc .plant_selector label.option
+{
+   display:block;
+   position:relative;
+   padding:0.4em 0.8em 0 0.8em;
+   font-size:160%;
+   border:2px solid #EDF9FF;
+   border-radius:1em;
+}
+#plant_calc .plant_selector:not(.unfolded) label.option:not(.checked)
+{
+   display:none;
+}
+#plant_calc .plant_selector label.option.checked,
+#plant_calc .plant_selector label.option:hover
+{
+   border-color:#A12C2C;
+}
+#plant_calc .plant_selector:not(.unfolded) label.option.checked
+{
+   margin:-0.6em 0;
+   text-align:center;
+}
+
+#plant_calc .plant_selector label.option>input[type='radio']
+{
+   position:absolute;
+   visibility:hidden;
+}
+
+/* Price indicators */
+#plant_calc .plant_price
+{
+   font-size:200%;
+}
+
+#plant_calc .plant_price>.value
+{
+   display:inline-block;
+   height:1.3em;
+   min-width:5em;
+   font-size:80%;
+   border:3px solid #A12C2C;
+   border-radius:1em;
+}
+#plant_calc .plant_price.single>.value
+{
+   margin-left:0.25em;
+   padding:0 0.5em 0 1.3em;
+   text-align:right;
+   background:url('/images/price_single_bg.svg') left center/contain no-repeat #EDF9FF;
+}
+#plant_calc .plant_price.summary>.value
+{
+   margin-left:0.25em;
+   padding:0 1.3em 0 0.5em;
+   background:url('/images/price_summary_bg.svg') right center/contain no-repeat #EDF9FF;
+}
+
+#plant_calc .fruit_price
+{
+   margin-top:0.3em;
+   font-size:180%;
+}
+#plant_calc .fruit_price>.value
+{
+   display:inline-block;
+   height:1.3em;
+   min-width:4em;
+   margin:-0.2em 0 0 0.25em;
+   padding:0 0.5em 0 1.3em;
+   font-size:90%;
+   text-align:right;
+   border:3px solid #A12C2C;
+   border-radius:1em;
+   background:url('/images/price_fruit_bg.svg') left center/contain no-repeat #EDF9FF;
+}
+
+/* Table */
+#plant_calc table.pricing_list
+{
+   margin-top:1.5em;
+   padding:0 1.5em;
+   background:url('/images/table_tl_bg.svg') 0 0/1.5em 3.5em no-repeat, url('/images/table_tm_bg.svg') 1.5em 0/calc(100% - 3em) 3.5em no-repeat, url('/images/table_tr_bg.svg') 100% 0/1.5em 3.5em no-repeat,
+              url('/images/table_ml_bg.svg') 0 3em/1.5em calc(100% - 7.2em) no-repeat, url('/images/table_mr_bg.svg') 100% 3em/1.5em calc(100% - 7.2em) no-repeat,
+              url('/images/table_bl_bg.svg') 0 100%/1.5em 4.8em no-repeat, url('/images/table_bm_bg.svg') 1.5em 100%/calc(100% - 3em) 4.8em no-repeat, url('/images/table_br_bg.svg') 100% 100%/1.5em 4.8em no-repeat transparent;
+}
+
+#plant_calc table.pricing_list th,
+#plant_calc table.pricing_list td
+{
+   padding:0.25em 0.5em 0 0.25em;
+   font-size:170%;
+   text-align:right;
+}
+#plant_calc table.pricing_list tr:first-child th,
+#plant_calc table.pricing_list tr:first-child td
+{
+   padding-top:1em;
+}
+#plant_calc table.pricing_list tr:first-child td
+{
+   text-align:center;
+   font-weight:bold;
+}
+#plant_calc table.pricing_list tr:last-child th,
+#plant_calc table.pricing_list tr:last-child td
+{
+   padding-bottom:1.4em;
+}
+#plant_calc table.pricing_list tr:not(:last-child) th,
+#plant_calc table.pricing_list tr:not(:last-child) td
+{
+   border-bottom:1px solid #A12C2C;
+}
+#plant_calc table.pricing_list td.padder
+{
+   width:0.8em;
+   border:none!important;
+   background:none transparent!important;
+}
+
+#plant_calc table.pricing_list tr:first-child td
+{
+   background:url('/images/td_l_bg.svg') 0 0.6em/1px calc(100% - 0.6em) no-repeat transparent;
+}
+#plant_calc table.pricing_list tr:last-child  td
+{
+   background:url('/images/td_l_bg.svg') 0 0/1px calc(100% - 1.4em) no-repeat transparent;
+}
+#plant_calc table.pricing_list td
+{
+   background:url('/images/td_l_bg.svg') 0 0/1px 100% no-repeat transparent;
+}
+
+#plant_calc table.pricing_list tr:first-child td.sel
+{
+   background:url('/images/td_sel_t_bg.svg') 0 0/100% 0.7em no-repeat, url('/images/td_sel_m_bg.svg') 0 0.7em/100% calc(100% - 0.7em) no-repeat transparent;
+}
+#plant_calc table.pricing_list tr:last-child  td.sel
+{
+   background:url('/images/td_sel_b_bg.svg') 0 100%/100% 1.4em no-repeat, url('/images/td_sel_m_bg.svg') 0 0/100% calc(100% - 1.4em) no-repeat transparent;
+}
+#plant_calc table.pricing_list td.sel
+{
+   background:url('/images/td_sel_m_bg.svg') 0 0/100% 100% no-repeat transparent;
+}
+
+#plant_calc table.pricing_list tr:not(:first-child) td:not(.sel)
+{
+   color:rgba(161,44,44,0.25);
+}
+
+@media (max-width:900px)
+{
+   #plant_calc table.pricing_list
+   {
+      background-position:0 0,1.5em 0,100% 0,
+                          0 2.8em,100% 2.8em,
+                          0 100%,1.5em 100%,100% 100%;
+     background-size:1.5em 3.2em,calc(100% - 3em) 3.2em,1.5em 3.2em,
+                     1.5em calc(100% - 6em),1.5em calc(100% - 6em),
+                     1.5em 3.8em,calc(100% - 3em) 3.8em,1.5em 3.8em;
+   }
+   #plant_calc table.pricing_list th,
+   #plant_calc table.pricing_list td
+   {
+      font-size:150%;
+   }
+}

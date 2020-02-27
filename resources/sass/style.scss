@@ -1,0 +1,85 @@
+.zooming {
+    position: relative;
+}
+
+.zooming img {
+    border-radius: 2rem;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    fill: $body-color;
+    stroke: $body-color;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+body {
+
+    text-shadow: 0px 0px 2px #00270c;
+}
+
+.btn-primary, .btn-success, .table-dark, .btn-secondary{
+    color:$body-color !important;
+}
+.btn-primary:hover, .btn-success:hover{
+    color:darken($body-color, 15%)
+}
+
+.form-control, .fileContainer {
+    background-color: #e4e4e4aa !important;
+    text-shadow: none;
+}
+
+.react-datepicker {
+    text-shadow: none;
+}
+
+.modal-xxl {
+    width: 96%;
+    max-width: 1280px;
+}
+
+#calculator-modal{
+    color:#A12C2C;
+    text-shadow: none;
+}
+
+#calculator-modal #calculator{
+    display:none;
+}
+
+#calculator-modal #calculator-replace{
+    display:block;
+}
+
+@media (min-width:568px) {
+    #calculator-modal #calculator{
+        display:block;
+    }
+    
+    #calculator-modal #calculator-replace{
+        display:none;
+    }
+}
+
+@media (min-width:667px) {
+    #calculator-modal #calculator{
+    }
+}
+
+@media (min-width:736px) {
+    #calculator-modal #calculator{
+    }
+}
+
+@media (min-width:812px) {
+    #calculator-modal #calculator{
+    }
+}
+
+.form-text.errors{
+    color:red;
+    font-size:1.2em;
+    text-shadow: 0 0 1px #ff6a6a;
+}

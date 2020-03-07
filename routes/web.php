@@ -20,7 +20,6 @@ Route::group(['prefix' => 'admin'], function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/photos/{id}', 'PhotosController@all')->name('photos');
 Route::patch('/cart/order', 'CartController@order')->name('cart-order');
@@ -34,3 +33,5 @@ Route::get('/seedlings/{id}', 'SeedlingsController@show')->name('seedlings');
 
 
 Route::post('/questionnaire', 'QuestionnaireController@store')->name('questionnaire');
+Auth::routes();
+

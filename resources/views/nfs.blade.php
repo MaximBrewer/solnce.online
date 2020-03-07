@@ -1,4 +1,3 @@
-@extends('layouts.app')
 @foreach($pages as $page)
 @section($page->slug)
 <div class="section" id="{{ $page->slug }}">
@@ -14,14 +13,6 @@
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                                 <br><br><a href="https://vk.com/elbrus7" rel="nofollow" target="_blank">https://vk.com/elbrus7</a>
-                        </div>
-                        @endif
-                        @if($page->slug == 'about')
-                        <div class="page-youtube">
-                            <video style="width:100%;" controls>
-                                <source src="/media/curl.mp4" type="video/mp4">
-                                <source src="/media/curl.ogg" type="video/ogg">
-                            </video>
                         </div>
                         @endif
                         <div class="page-body">
@@ -178,3 +169,110 @@
     </div>
 </div>
 @stop
+
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@include('layouts.head')
+<body class="dark-horizontal theme-white" data-spy="scroll" data-target=".navbar-nav">
+    <div class="wrapper align-items-stretch animsition">
+        <div class="promo-bg">
+            <video style="width:100%;height: 100%;-o-object-fit: fill;object-fit: fill;" autoplay="true" muted
+                playsinline loop id="bgvideo">
+                <source src="/media/bg.mp4" type="video/mp4">
+                <source src="/media/bg.ogg" type="video/ogg">
+            </video>
+        </div>
+        <nav id="sidebar">
+            <button type="button" id="sidebarCollapse" class="btn">
+                <i class="fa fa-bars"></i>
+                <span class="sr-only">Toggle Menu</span>
+            </button>
+            <div class="p-4 overflow-y">
+                @php
+                echo menu('nfs', 'topmenu')
+                @endphp
+            </div>
+        </nav>
+        <main>
+            <div class="wrapper">
+                @yield('cart')
+                <div id="content">
+                    @include('layouts.promo')
+                    @yield('about')
+                    @yield('legal')
+                    @yield('insureance')
+                    @yield('charity')
+                    @yield('consultation')
+                    @yield('recreation')
+                    @yield('shop')
+                    @yield('questionnaire')
+                </div>
+            </div>
+            <div class="footer">
+                <div class="container">
+                    <div class="row footer-content">
+                        <div class="col-lg-6">
+                        </div>
+                        <div class="col-lg-6">
+                        </div>
+                    </div>
+                    <div class="copyright">{!! __("&copy;&nbsp; 2020 People's orchard") !!}</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    @yield('cart-modal')
+    <div class="container">
+        <!-- Root element of PhotoSwipe. Must have class pswp. -->
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+            <!-- Background of PhotoSwipe. 
+         It's a separate element, as animating opacity is faster than rgba(). -->
+            <div class="pswp__bg"></div>
+            <!-- Slides wrapper with overflow:hidden. -->
+            <div class="pswp__scroll-wrap">
+                <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+                <div class="pswp__container">
+                    <!-- don't modify these 3 pswp__item elements, data is added later on -->
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+                <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                <div class="pswp__ui pswp__ui--hidden">
+                    <div class="pswp__top-bar">
+                        <!--  Controls are self-explanatory. Order can be changed. -->
+                        <div class="pswp__counter"></div>
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                        <button class="pswp__button pswp__button--share" title="Share"></button>
+                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                        <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                        <!-- element will get class pswp__preloader--active when preloader is running -->
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                                <div class="pswp__preloader__cut">
+                                    <div class="pswp__preloader__donut"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div>
+                    </div>
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                    </button>
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                    </button>
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="{{ asset('js/js_utils.js') }}" defer></script>
+    <script src="{{ asset('js/nfs.js') }}?ver=1.1" defer></script>
+    <script src="{{ asset('js/profile.js') }}?ver=1.1" defer></script>
+</body>
+</html>

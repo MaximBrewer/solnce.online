@@ -9,7 +9,7 @@
                     <div class="section-descr">
                         @if($page->youtube)
                         <div class="page-youtube">
-                            <iframe src="https://www.youtube.com/embed/{{ $page->youtube }}" frameborder="0"
+                            <iframe width="100%" src="https://www.youtube.com/embed/{{ $page->youtube }}" frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                                 <br><br><a href="https://vk.com/elbrus7" rel="nofollow" target="_blank">https://vk.com/elbrus7</a>
@@ -169,7 +169,6 @@
     </div>
 </div>
 @stop
-
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 @include('layouts.head')

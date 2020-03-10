@@ -1244,10 +1244,24 @@ input[type="number"] {
 .min-rem-8 .input-group.page-item-buy > .btn {
     min-width: 3rem;
 }
+
 .page-youtube {
     width: 90%;
     margin: 0 auto 1.4rem;
+	position: relative;
+    padding-bottom: 47.625%;
+	padding-top: 25px;
+	height: 0;
 }
+.page-youtube iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
 
 .zooming img:first-child {
     position: relative;

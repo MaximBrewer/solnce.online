@@ -172,10 +172,10 @@ export default function Shop(props) {
                     loading={loading}
                 />
             </div>
-            <Button variant="primary" onClick={handleShowCart} id="shopping-cart-link" className="sidebar-affix">
+            <a onClick={handleShowCart} id="shopping-cart-link" className="sidebar-affix" href="javascript:void(0)">
                 <i className="fa fa-shopping-cart" aria-hidden="true"></i>
                 <i className={!!list.length ? "cnt" : "cnt d-none"}>{list.length}</i>
-            </Button>
+            </a>
             <Modal show={showCart} tabIndex="-1" size="lg" onHide={handleCloseCart}>
                 <Modal.Header closeButton>
                     <Modal.Title><i className="fa fa-shopping-cart" aria-hidden="true"></i> {window.__('Cart')}</Modal.Title>

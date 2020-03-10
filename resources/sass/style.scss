@@ -16,15 +16,8 @@
 
 body {
 
-    text-shadow: 0px 0px 2px #00270c;
 }
 
-.btn-primary, .btn-success, .table-dark, .btn-secondary{
-    color:$body-color !important;
-}
-.btn-primary:hover, .btn-success:hover{
-    color:darken($body-color, 15%)
-}
 
 .form-control, .fileContainer {
     background-color: #e4e4e4aa !important;

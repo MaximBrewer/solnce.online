@@ -16499,6 +16499,16 @@ a.pswp__share--download:hover {
   left: 0;
 }
 
+.modal-content {
+  color: #ffed4a;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.table-dark a {
+  color: #ffed4a;
+}
+
 .form-control,
 .fileContainer {
   background-color: #e4e4e4aa !important;

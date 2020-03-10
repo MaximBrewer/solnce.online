@@ -205,6 +205,7 @@
                     @yield('recreation')
                     @yield('shop')
                     @yield('questionnaire')
+                    @yield('calculator')
                 </div>
             </div>
             <div class="footer">

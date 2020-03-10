@@ -205,7 +205,6 @@
                     @yield('recreation')
                     @yield('shop')
                     @yield('questionnaire')
-                    @yield('calculator')
                 </div>
             </div>
             <div class="footer">
@@ -270,6 +269,7 @@
             </div>
         </div>
     </div>
+    @yield('calculator')
     <!-- Scripts -->
     <script src="{{ asset('js/js_utils.js') }}" defer></script>
     <script src="{{ asset('js/nfs.js') }}?ver=1.1" defer></script>

@@ -16,7 +16,7 @@ class NfsController extends Controller
     public function index(Request $r)
     {
 
-        $pages = Page::where('site', 'nfs')->get();
+        $pages = Page::whereIn('site', ['both', 'nfs'])->get();
 
         foreach ($pages as &$page) {
             if ($page->slug == 'recreation') {

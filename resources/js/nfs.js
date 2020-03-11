@@ -1,24 +1,4 @@
-window.__ = function (name) {
-
-    let translation, translationNotFound = true
-
-    try {
-        translation = name.split('.').reduce((t, i) => t[i] || null, window._translations.php)
-        if (translation) {
-            translationNotFound = false
-        }
-    } catch (e) {
-        translation = name
-    }
-
-    if (translationNotFound) {
-        translation = window._translations.json[name]
-            ? window._translations.json[name]
-            : name
-    }
-    return translation
-
-}
+require('./trans.js');
 
 require('./bootstrap');
 require('./animsition.min.js');
@@ -29,7 +9,7 @@ import LazyLoad from "vanilla-lazyload";
 import PlantCalc from "./calc.js";
 import React from "react";
 import ReactDOM from "react-dom";
-import Shop from "./components/Shop.js";
+import Seedlings from "./components/Seedlings.js";
 import Questionnaire from "./components/Questionnaire.js";
 
 
@@ -42,7 +22,7 @@ var myLazyLoad = new LazyLoad({
 axios.get('/seedlings')
     .then(function (res) {
         ReactDOM.render(
-            <Shop ss={res.data.data} />,
+            <Seedlings ss={res.data.data} />,
             document.getElementById('shop')
         );
     })

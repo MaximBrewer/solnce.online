@@ -9,10 +9,17 @@
                     <div class="section-descr">
                         @if($page->youtube)
                         <div class="page-youtube">
-                            <iframe width="100%" src="https://www.youtube.com/embed/{{ $page->youtube }}" frameborder="0"
+                            <iframe width="100%" src="https://www.youtube.com/embed/{{ $page->youtube }}"
+                                frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
-                                <br><br><a href="https://vk.com/elbrus7" rel="nofollow" target="_blank">https://vk.com/elbrus7</a>
+                        </div>
+                        <div>
+                            @if($page->slug == 'about')
+                            <a href="https://vk.com/sochisad" rel="nofollow" target="_blank">https://vk.com/sochisad</a><br><br>
+                            @else
+                            <a href="https://vk.com/elbrus7" rel="nofollow" target="_blank">https://vk.com/elbrus7</a><br><br>
+                            @endif
                         </div>
                         @endif
                         <div class="page-body">
@@ -172,6 +179,7 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 @include('layouts.head')
+
 <body class="dark-horizontal theme-white" data-spy="scroll" data-target=".navbar-nav">
     <div class="wrapper align-items-stretch animsition">
         <div class="promo-bg">
@@ -275,4 +283,5 @@
     <script src="{{ asset('js/nfs.js') }}?ver=1.1" defer></script>
     <script src="{{ asset('js/profile.js') }}?ver=1.1" defer></script>
 </body>
+
 </html>

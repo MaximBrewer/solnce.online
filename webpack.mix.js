@@ -10,7 +10,8 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-
-mix.react('resources/js/nfs.js', 'public/js');
-mix.react('resources/js/profile.js', 'public/js');
 mix.sass('resources/sass/app.scss', 'public/css');
+
+mix.react('resources/js/nfs.js', 'public/js')
+.react('resources/js/sss.js', 'public/js')
+.react('resources/js/profile.js', 'public/js');

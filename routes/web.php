@@ -12,11 +12,13 @@
 */
 
 Route::get('/', 'NfsController@index')->name('nfs');
+Route::get('/sss', 'SssController@index')->name('sss');
 
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
 
 Auth::routes();
 

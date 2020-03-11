@@ -83,4 +83,4 @@
             openPhotoSwipe(album_id);
         })
     })
-}($));
+}($))

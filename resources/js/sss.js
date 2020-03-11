@@ -2,7 +2,6 @@ require('./trans.js');
 
 require('./bootstrap');
 require('./animsition.min.js');
-require('./script.js');
 
 
 import LazyLoad from "vanilla-lazyload";

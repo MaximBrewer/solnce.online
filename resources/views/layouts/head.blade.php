@@ -9,7 +9,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}?ver=2.15" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}?ver=2.16" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Marmelad&display=swap" rel="stylesheet">
     <script>

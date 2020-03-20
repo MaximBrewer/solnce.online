@@ -77,7 +77,7 @@
 @stop
 @endforeach
 @section('shop')
-<div class="section" id="shop"></div>
+<div class="section" id="seedlings"></div>
 @stop
 @section('questionnaire')
 <div class="section" id="questionnaire"></div>
@@ -280,8 +280,7 @@
     @yield('calculator')
     <!-- Scripts -->
     <script src="{{ asset('js/js_utils.js') }}" defer></script>
-    <script src="{{ asset('js/nfs.js') }}?ver=1.1" defer></script>
-    <script src="{{ asset('js/profile.js') }}?ver=1.1" defer></script>
+    <script src="{{ asset('js/app.js') }}?ver=1.5" defer></script>
 </body>
 
 </html>

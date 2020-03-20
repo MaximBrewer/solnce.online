@@ -110,27 +110,27 @@ export default function Questionnaire() {
                         }) => (
                                 <Form noValidate onSubmit={handleSubmit}>
                                     <Form.Group as={Row} controlId="formFCS">
-                                        <Form.Label column md="2" className="text-nowrap">{window.__('FCS')}</Form.Label>
-                                        <Col md="10">
+                                        <Form.Label column md="3" className="text-nowrap">{window.__('FCS')}</Form.Label>
+                                        <Col md="9">
                                             <Form.Control type="text" placeholder={window.__('FCS (in full)')} value={values.fcs} name="fcs" onChange={handleChange} isValid={touched.fcs && !errors.fcs} isInvalid={touched.fcs && !!errors.fcs} />
                                         </Col>
                                     </Form.Group>
                                     <Form.Group controlId="formBasicEmail" as={Row}>
-                                        <Form.Label column md="2" className="text-nowrap">{window.__('E-mail')}</Form.Label>
-                                        <Col md="10">
+                                        <Form.Label column md="3" className="text-nowrap">{window.__('E-mail')}</Form.Label>
+                                        <Col md="9">
                                             <Form.Control type="email" name="email" placeholder={window.__('E-mail')} value={values.email} onChange={handleChange} isValid={touched.email && !errors.email} isInvalid={touched.email && !!errors.email} />
                                         </Col>
                                         {/* <Form.Text className="text-muted">{window.__('We\'ll never share your email with anyone else.')}</Form.Text> */}
                                     </Form.Group>
                                     <Form.Group controlId="formPhone" as={Row}>
-                                        <Form.Label column md="2" className="text-nowrap">{window.__('Phone')}</Form.Label>
-                                        <Col md="10">
+                                        <Form.Label column md="3" className="text-nowrap">{window.__('Phone')}</Form.Label>
+                                        <Col md="9">
                                             <InputMask mask="+7(999)999-99-99" maskChar=" " className={!touched.phone ? "form-control" : touched.phone && !errors.phone ? "form-control is-valid" : "form-control is-invalid"} placeholder={window.__('Phone')} onChange={handleChange} value={values.phone} name="phone" />
                                         </Col>
                                     </Form.Group>
                                     <Form.Group controlId="formBirthdate" as={Row}>
-                                        <Form.Label column md="2" className="text-nowrap">{window.__('Date of Birth')}</Form.Label>
-                                        <Col md="10">
+                                        <Form.Label column md="3" className="text-nowrap">{window.__('Date of Birth')}</Form.Label>
+                                        <Col md="9">
                                             <DatePicker
 
                                                 onChange={e => setFieldValue('birthdate', e)}
@@ -148,38 +148,38 @@ export default function Questionnaire() {
                                         </Col>
                                     </Form.Group>
                                     <Form.Group controlId="formRegion" as={Row}>
-                                        <Form.Label column md="2" className="text-nowrap">{window.__('Region')}</Form.Label>
-                                        <Col md="10">
+                                        <Form.Label column md="3" className="text-nowrap">{window.__('Region')}</Form.Label>
+                                        <Col md="9">
                                             <Form.Control name="region" type="text" placeholder={window.__('Region')} value={values.region} onChange={handleChange} isValid={touched.region && !errors.region} isInvalid={touched.region && !!errors.region} />
                                         </Col>
                                     </Form.Group>
                                     <Form.Group controlId="formEducation" as={Row}>
-                                        <Form.Label column md="2" className="text-nowrap">{window.__('Education')}</Form.Label>
-                                        <Col md="10">
+                                        <Form.Label column md="3" className="text-nowrap">{window.__('Education')}</Form.Label>
+                                        <Col md="9">
                                             <Form.Control name="education" type="text" placeholder={window.__('Education')} value={values.education} onChange={handleChange} isValid={touched.education && !errors.education} isInvalid={touched.education && !!errors.education} />
                                         </Col>
                                     </Form.Group>
                                     <Form.Group controlId="formDirectrion" as={Row}>
-                                        <Form.Label column md="2" className="text-nowrap">{window.__('Direction')}</Form.Label>
-                                        <Col md="10">
+                                        <Form.Label column md="3" className="text-nowrap">{window.__('Direction')}</Form.Label>
+                                        <Col md="9">
                                             <Form.Control name="directrion" type="text" placeholder={window.__('Direction of activity')} value={values.directrion} onChange={handleChange} isValid={touched.directrion && !errors.directrion} isInvalid={touched.directrion && !!errors.directrion} />
                                         </Col>
                                     </Form.Group>
                                     <Form.Group controlId="formDescription" as={Row}>
-                                        <Form.Label column md="2" className="text-nowrap">{window.__('Description')}</Form.Label>
-                                        <Col md="10">
+                                        <Form.Label column md="3" className="text-nowrap">{window.__('Description')}</Form.Label>
+                                        <Col md="9">
                                             <Form.Control name="description" type="text" placeholder={window.__('Description of the activity')} value={values.description} onChange={handleChange} isValid={touched.description && !errors.description} isInvalid={touched.description && !!errors.description} />
                                         </Col>
                                     </Form.Group>
                                     <Form.Group controlId="formLink" as={Row}>
-                                        <Form.Label column md="2" className="text-nowrap">{window.__('Link')}</Form.Label>
-                                        <Col md="10">
+                                        <Form.Label column md="3" className="text-nowrap">{window.__('Link')}</Form.Label>
+                                        <Col md="9">
                                             <Form.Control name="link" type="text" placeholder={window.__('Link to information resources')} value={values.link} onChange={handleChange} isValid={touched.link && !errors.link} isInvalid={touched.link && !!errors.link} />
                                         </Col>
                                     </Form.Group>
                                     <Form.Group controlId="formPhoto" as={Row}>
-                                        <Form.Label column md="2" className="text-nowrap">{window.__('Photo')}</Form.Label>
-                                        <Col md="10">
+                                        <Form.Label column md="3" className="text-nowrap">{window.__('Photo')}</Form.Label>
+                                        <Col md="9">
                                             <ImageUploader
                                                 withIcon={true}
                                                 buttonText={window.__('Choose photo')}

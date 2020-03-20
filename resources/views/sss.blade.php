@@ -278,8 +278,8 @@
         </div>
     </div>
     <!-- Scripts -->
-    <script src="{{ asset('js/sss.js') }}?ver=1.1" defer></script>
-    <script src="{{ asset('js/profile.js') }}?ver=1.1" defer></script>
+    <script src="{{ asset('js/js_utils.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}?ver=1.1" defer></script>
 </body>
 
 </html>
